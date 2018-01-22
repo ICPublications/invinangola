@@ -1,0 +1,51 @@
+{
+  "name": "clientwork-justinakomiah-website",
+  "version": "1.0.0",
+  "description": "Website Developed for justinakomiah.com BY INV",
+  "main": "app/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel app/scripts/build/buildScript.js --out-file app/scripts/build/compiledBuildScript.js",
+    "start": "node app/scripts/build/compiledBuildScript.js",
+    "preexpose": "forever start app/scripts/build/compiledBuildScript.js",
+    "expose": "ngrok http 3000",
+    "postexpose": "forever stop 0",
+    "client_show": "start && expose",
+    "build2": "npm run webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielINV/clientwork-justinakomiah-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielINV/clientwork-justinakomiah-website/issues"
+  },
+  "homepage": "https://github.com/DanielINV/clientwork-justinakomiah-website#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.10.0",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "install": "^0.10.1",
+    "npm": "^5.5.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^2.0.1",
+    "webpack-hot-middleware": "^2.21.0"
+  }
+}
