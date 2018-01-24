@@ -43,7 +43,9 @@ module.exports = {
     },
     plugins:[
         new HtmlWebpackPlugin({
-            title: 'Justin Akomiah - Creative Director'
+            title: 'African Banker Awards 2018',
+            template: './app/scripts/libs/template.ejs',
+            inject: 'body'
         }), 
         new CleanWebpackPlugin(['tmp']),
         new webpack.HotModuleReplacementPlugin()
