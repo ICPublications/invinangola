@@ -1,10 +1,14 @@
-import react from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 
-ReactDOM.render(
-    <div>
-        <h1>HIIIIIIIII</h1>
-    </div>
-);
+class Sections extends React.Component{
+    render(){
+        return(
+            <div>
+                <h1>HIIIIIIIII</h1>
+            </div>
+        )
+    }
+}
 
-modules.export = sections;
+modules.export = Sections;
