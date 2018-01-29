@@ -1,14 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
 
-class Sections extends React.Component{
+export class Sections extends React.Component{
     render(){
         return(
-            <div>
-                <h1>HIIIIIIIII</h1>
-            </div>
+            <section className="row">
+                {this.props.extraBgElements}
+                <div className={this.props.containerType}>
+                    {this.props.children}
+                </div>
+            </section>
         )
     }
 }
 
-modules.export = Sections;
+module.exports = Sections;

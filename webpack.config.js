@@ -3,9 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+//const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 
 module.exports = {
-    entry: [ 'webpack-hot-middleware/client' , './app/scripts/libs/index.js'], //Can also use "main" property
+    entry: [ 'webpack-hot-middleware/client?reload=true' , './app/scripts/libs/index.js'], //Can also use "main" property
     output: {
         path: path.resolve(__dirname, 'tmp'), //resolves the absolute path 
         filename: '[name].bundle.js', //
@@ -28,8 +30,9 @@ module.exports = {
                 use: ['style-loader', 'css-loader'] //to use the CSS imported - in your index.js file you 
             },
             {
-                test: /\.scss$/,
+                test: /\.(sass|scss)$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+                //: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
             },
             {
                 test: /\.(jpg|png|svg|gif)$/,
@@ -56,7 +59,15 @@ module.exports = {
             inject: 'body'
         }), 
         new CleanWebpackPlugin(['tmp']),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+           })
+        /* new ExtractTextPlugin({
+            filename: 'main.css',
+            allChunks: true
+        }), */
         //new UglifyJsPlugin()
     ]
   };
