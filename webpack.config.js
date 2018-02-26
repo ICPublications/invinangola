@@ -9,7 +9,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     entry: [ 'webpack-hot-middleware/client?reload=true' , './app/scripts/libs/index.js'], //Can also use "main" property
     output: {
-        path: path.resolve(__dirname, 'tmp'), //resolves the absolute path 
+        path: path.resolve(__dirname, 'dist'), //resolves the absolute path 
         filename: '[name].bundle.js', //
         publicPath: '/'
     },
@@ -62,7 +62,8 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.ProvidePlugin({
             $: "jquery",
-            jQuery: "jquery"
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
            })
         /* new ExtractTextPlugin({
             filename: 'main.css',

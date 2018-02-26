@@ -1,0 +1,20 @@
+.navbar-collapse{
+    min-width:1000px;
+    a{
+        line-height:70px !important;
+    }
+    @media #{$break-small}{
+        background-color: rgba(52, 52, 52, 0.8);
+        a{
+            line-height:20px !important ;
+        }
+    }
+}
+#navbar{
+    display:none;
+    
+}
+
+button.navbar-toggle{
+    margin-top:0;
+}

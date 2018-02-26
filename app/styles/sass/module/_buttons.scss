@@ -1,0 +1,29 @@
+button{ 
+    margin: 0 20px 0 0;
+    font-size:15px;
+}
+
+.darkgreen-btn{
+    background-color: $darkgreen;
+    color: white;
+    font-weight: 500;
+    padding: 10px 30px;
+    border:3px solid $darkgreen;
+    margin-bottom:15px;
+}
+
+.darkgrey-btn{
+    background-color: $darkgrey;
+    color: white;
+    font-weight: 100;
+    padding: 10px 30px;
+    border:none;
+}
+
+.darkoutline-btn{
+    background-color: transparent;
+    color:$darkgrey;
+    font-weight: 500;
+    padding: 10px 30px;
+    border:3px solid $darkgrey;
+}

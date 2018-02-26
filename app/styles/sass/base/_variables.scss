@@ -1,0 +1,16 @@
+$darkgreen: #379823;
+$tertiarygreen: #8db400;
+$darkgreen2: #609634;
+$darkgrey: #656565;
+$middlegrey: #d8d8d8;
+$lightestgrey: #ededed;
+
+.vertical-center{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+$break-small: 'only screen and (max-width: 768px)'; 
+$break-medium: 'only screen and (max-width: 992px)';
+$break-large: 'only screen and (max-width: 1200px)';

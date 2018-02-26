@@ -1,0 +1,27 @@
+#judging-section{
+    background-image:url('~images/landingbg.png');
+    background-color: $lightestgrey;
+    background-size: cover; 
+    background-position: center center;
+    padding-bottom:100px;
+
+    color: $darkgrey;
+    >div{
+    
+    }
+    h1{
+        color: white;
+        margin-bottom: 50px;
+        margin-top:0;
+        text-align:left;
+    } 
+    h3{
+        display:inline-block;
+        margin-top:40px;
+        font-weight:400;
+    }
+    h3, p{
+        background-color: white;
+        padding:15px 15px 15px 15px;;
+    }
+}

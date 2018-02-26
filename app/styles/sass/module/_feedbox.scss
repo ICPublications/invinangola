@@ -1,0 +1,11 @@
+#programmebox{
+    padding: 20px 70px;
+    @media #{$break-small}{
+        padding: 20px 30px;
+    }
+    background-color: $darkgrey;
+    color: $lightestgrey;
+    text-align:left;
+}
+
+@import '../module/_scheduleitem.scss';

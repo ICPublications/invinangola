@@ -1,0 +1,35 @@
+#hoteldets{
+    height:50%;
+    @media #{$break-small}{
+        height:auto;
+    }
+    width:100%;
+    position:relative;
+    @media #{$break-small}{
+        img{
+            display:block !important;
+        }
+    }
+    >div{
+        @media #{$break-small}{
+            float:none;
+            transform: none !important;
+        }
+        @extend .vertical-center;
+        >p{
+            &:first-child{
+                border-right:1px solid $darkgrey;
+            } 
+        }
+    }
+    img{
+        display:none;
+    }
+    h3{
+        font-weight:700;
+    }
+    p{
+        margin-left:0;
+        padding-left:0;
+    }
+}

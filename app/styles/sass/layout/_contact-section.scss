@@ -1,0 +1,15 @@
+@import '../module/_contactbox.scss';
+
+#contact-section{
+    background-color: $darkgrey;
+    color: $lightestgrey;
+    padding-top:100px;
+    padding-bottom:100px;
+    text-align:center;
+    .section-content{
+        &>p{ 
+            font-size:large;
+            font-weight:lighter;
+        }
+    }
+}

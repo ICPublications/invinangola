@@ -1,0 +1,15 @@
+#previousevent-section{
+    padding-bottom:0;
+    background-color: $darkgrey;
+    color:$lightestgrey;
+    >div.container-fluid{ 
+        padding-left:0;
+        padding-right:0;
+    }
+    p{
+        margin-bottom:40px;
+    }
+    .owl-carousel{
+        margin-top:100px;
+    }
+}

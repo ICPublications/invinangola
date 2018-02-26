@@ -1,9 +1,9 @@
+@import '/base/_variables.scss';
 @import '/base/_base.scss';
 @import '/base/_functions.scss';
 @import '/base/_placeholders.scss';
 @import '/base/_reset.scss';
 @import '/base/_typography.scss';
-@import '/base/_variables.scss';
 
 @import '/hacks/_shame.scss';
 
@@ -16,6 +16,7 @@
 
 @import '/layout/_grid.scss';
 @import '/layout/_header.scss';
+@import '/layout/_sections.scss';
 
 @import '/module/_buttons.scss';
 @import '/module/_forms.scss';
@@ -24,6 +25,8 @@
 @import '/pages/_home.scss';
 
 @import '/state/_state.scss';
+
+
 
 /* @import '/themes/ '; */
 

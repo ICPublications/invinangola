@@ -1,0 +1,31 @@
+.scheduleitem{
+    h4{
+        padding-top:50px;
+        padding-bottom:5px;
+        margin-top:0;
+        font-weight:400;
+        font-size:23px;
+        span{
+            font-weight:100;
+            font-size:smaller;
+            color:$darkgreen;
+            margin-left:20px;
+            @media #{$break-small}{
+                display:block;
+                margin-left:0;
+
+            }
+        }
+    }
+    p{
+        border-bottom:1px solid $lightestgrey;
+        padding-bottom:50px;
+        font-weight:100;
+    }  
+    &:last-of-type{
+        p{
+            border-bottom:none;
+            margin-bottom:0;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+/* Sections Module */
+
+/* Templates */
+section{
+    padding-top:20px;
+    padding-bottom:20px; 
+    &.normal{
+        padding-top:100px;
+        padding-bottom:100px;
+        h1{
+            margin-top:0;
+        }
+    }
+    &.landing{
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        &.full-screen-left{
+            height: 100vh;
+            .container{
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                
+                .section-content{
+                    img{
+                        width:100%;
+                    }
+                }
+            }
+        }
+        
+        &.threequarter-screen-left{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            .container{
+
+                
+                .section-content{
+                    img{
+                        width:100%;
+                    }
+                }
+            }
+        }
+        
+        &.half-screen-left{
+        
+        }
+        &.quarter-screen-left{
+        
+        }
+
+    }
+    &.companycarousel{
+        color:#c5c6c8;
+        text-align: center;
+    }
+
+    &#sponsorcarousel-section{
+        background-color: white;
+        border-top:1px solid lightgrey;
+    }
+
+    &.splitsection{
+        height: 50vh;
+        position:relative;
+        margin:0;
+        padding:0;
+        background-color: $lightestgrey;
+        @media #{$break-small}{
+            min-height:50vh;
+            height:auto;
+        }
+        >div{
+            float:left;
+        }
+        .splitsection-image{
+            @media #{$break-small}{
+                width:100%;
+                display:none;
+            }
+            height:100%;
+            width:50%;
+            background-position: center center;
+            background-size: cover;
+        }
+        .splitsection-text{
+            @media #{$break-small}{
+                width:100%;
+                height:auto;
+                background-color: #ededed;
+                padding-top:20px;
+                h2{
+                    padding-bottom:20px;
+                }
+                img{
+                    display:block !important;
+                    margin-top:20px;
+                    margin-bottom:20px;
+                }
+                p{
+                    margin-bottom:50px;
+                }
+                >div{
+                    transform:none !important;
+                }
+            }
+            height:100%;
+            width:50%;
+            img{
+                display:none;
+            }
+            >div{
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+        }
+        .splitsection-empty{
+            height:100%;
+            width:50%;
+            background-color: $lightestgrey;
+            @media #{$break-small}{
+                h3{
+                    padding-bottom:30px;
+                }
+                p{
+                    padding-top:20px;
+                }
+                width:100%;
+                padding-top:30px;
+                padding-bottom:50px;
+            }
+        }
+    }
+}
+
+@import '_mainsponsor-section.scss';
+@import '_judging-section.scss';
+@import '_hoteldets.scss';
+@import '_programme-section.scss';
+@import '_about-section.scss';
+@import '_contact-section.scss';
+@import '_landingsplit.scss';
+@import '../module/gmaps.scss';
+@import '../module/_navbar.scss';
+@import '_previousevent-section.scss';

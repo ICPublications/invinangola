@@ -1,0 +1,41 @@
+.initial{
+    .winner-title span{
+        display:none;
+    }
+    .winner-content{
+        display:block;
+    }
+}
+.winner-content{
+    display:none;
+}
+.winner-title{
+    color: #656565;
+    cursor: pointer;
+    span{
+        color: #ededed;
+    }
+    
+}
+.year h3{
+    color:#484848;
+    font-size:100px;
+    font-weight:700;
+}
+.winnersbyyear{
+    h4{
+        color: #484848;
+        font-weight:700;
+    }
+    h5{
+        font-weight:200;
+    }
+}
+.year-row{
+
+    border-top:1px solid #484848;
+    padding: 20px 0;
+    :first-of-type{
+        border-top:none;
+    }
+}
