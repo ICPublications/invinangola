@@ -26,6 +26,11 @@ import Navbar from 'components/Navbar/index.js';
 import NavItem from 'components/Navbar/NavItem/index.js';
 import ScrollingDownload from 'components/ScrollingDownload/index.js';
 import PreviousWinners from 'components/PreviousWinners/index.js';
+import { WSAEHOSTDOWN } from 'constants';
+import Covington from 'images/covington-logo.gif';
+import AB from 'images/abm-logo.png';
+import ABk from 'images/abk-logo.svg';
+import Events from 'images/events.png';
 
 const categoriesArray = 
 [
@@ -85,115 +90,82 @@ let extraHTML = <img className="col-xs-12 col-md-4" src={landingcornerpiece} sty
 
 ReactDOM.render(
     <div>
-        <Navbar height='100px' bgColor='rgba(52, 52, 52, 0.8)'>
+        <Navbar height='100px' bgColor='white'>
             <NavItem href="#firstsplitsection">About</NavItem>
-            <NavItem href="#categories">Categories</NavItem>
-            <NavItem href="#judging-section">Judging</NavItem>
-            <NavItem href="#programme-section">Programme</NavItem>
-            <NavItem href="#venue-section">Venue</NavItem>
-            <NavItem href="#mainsponsor-section">Sponsors</NavItem>
-            <NavItem href="#contact-section">Contacts</NavItem>
+            <NavItem href="#mainsponsor-section">Menu1</NavItem>
+            <NavItem href="#contact-section">Menu2</NavItem>
         </Navbar>
         
-        <Landing id="landing-section" template="threequarter-screen-left" extraBgElements={extraHTML}>
-            <div className="col-xs-12 col-sm-8 col-md-6">
-                <h1><img src={logo} className="img-responsive" /></h1> 
-                <h2 className="brandfont">Compete. Celebrate. Network</h2>
-                <h3 className="brandfont" style={{fontStyle:'italic', marginTop:'0'}}>Rewarding Banking Excellence in Africa</h3>
-                <h4 style={{fontWeight:'normal', color: '#379823'}}>Busan, South Korea, 22<sup>nd</sup> May 2018</h4>
-                <hr style={{borderTop: '1px solid darkgrey'}} />
-                <p>The African Banker Awards are designed to recognize the reforms, rapid modernisation, consolidation, integration and expansion of Africa’s banking and financial system.</p>
-                <div className="entryinfo">
-                    <p>We are now receiving entries for the 12th edition of the African Banker Awards.</p> 
-                    <p>Submit your entry here by  Monday 20th March 2018 at 23.59 GMT.</p>
-                </div>
-                <a target="_blank" href="https://www.eventbrite.co.uk/e/african-banker-awards-2018-tickets-43207317249"><button className="darkgreen-btn col-xs-12 col-sm-4 col-md-4">Book your place</button></a>
-                <a target="_blank" href="https://icpublications.formstack.com/forms/african_banker_awards_2018 "><button className="darkoutline-btn col-xs-12 col-sm-4 col-md-4" >Entry Form</button></a>
-
-
+        <Landing id="landing-section" template="threequarter-screen-left">
+            <div className="col-xs-12 col-sm-8 col-md-6" style={{backgroundColor:'red'}}>
+                <h1><img src={logo} className="img-responsive" style={{width: '250px', marginLeft: '290px'}}/></h1>
+                <h5 style={{marginLeft: '290px', marginTop:'50px', color:'white', fontWeight:'bold'}}>New York, Semptember 2018</h5> 
             </div>
         </Landing>
-        <CompanyCarousel id="sponsorcarousel-section" logoArray={allSponsors}>
-            <h4>Our Sponsors</h4>
-        </CompanyCarousel>
+        <Sections id="about-section" typeClass="normal" containerType="container-fluid" style={{marginLeft:'170px'}}>
+            <h3 className="col-xs-12 col-sm-7">
+            The Invest in Angola Forum, organised by IC Publications and hosted by Covington, will convene the business and investment community in New York City, in September 2018. 
+With a clear focus on bringing the best projects into the table, the Invest in Angola Forum will focus on showcasing the most recent business opportunities in the country. 
+Angola has been undertaking ambitious reforms to foster greater investment and private sector participation in key economic areas, namely: IT & Telecoms, Banking, Energy and Agribusiness.
+Underpinned by a renewed confidence, strong & stable government and a friendly business environment, the Invest in Angola Forum is hosted at the right time. 
+
+            </h3>
+            <ul className="col-xs-12 col-sm-4 col-sm-offset-1" style={{listStyleType:'none'}}>
+                <li><h4>Programme Highlights</h4></li>
+                <li style={{borderTop:'1px solid', marginBottom:'10px', paddingTop: '5px'}}>The new government reforms</li>
+                <li style={{borderTop:'1px solid', marginBottom:'10px', paddingTop: '5px'}}>Privatisation and partnerships with Angola public companies</li>
+                <li style={{borderTop:'1px solid', marginBottom:'10px', paddingTop: '5px'}}>Powering Angola - Sustainable Energy Mix</li>
+                <li style={{borderTop:'1px solid', marginBottom:'10px', paddingTop: '5px'}}>Presentation of 5 bankable projects in Angola (Energy, Infrastructure, and Agribusiness)</li>
+            </ul>
+        </Sections>
         <SplitSection id="firstsplitsection">
             <SplitSectionText>
-                <h2>Africa's Most Prestigious Banking Awards</h2>
-                <img className="mobile-image img-responsive" src={SSI} />
-                <p>The most prestigious event in Africa’s banking and finance sector, The African Banker Awards, is held Under the High Patronage of the African Development Bank.</p>
-                <p>The annual event, which takes place during the annual meeting of the African Development Bank, highlights the achievements of companies and individuals that contribute to the transformation and development of Africa’s financial sector. </p>
+                <h2>Meet New Partners</h2>
+                <img className="mobile-image img-responsive" src={SSI} alt="An image from the African Banker Awards 2013" />
+                <p>
+                Sponsors will benefit from networking opportunities with government officials, current and potential investors, private sector companies, intergovernmental and multilateral organisations, consultancies and advisory firms, and other stakeholders, including high level speakers. Opportunities for scheduled or impromptu meetings are also available and can be facilitated in line with sponsors’ objectives. 
+                </p>
+                <ul>
+                    <li>Sovereign and corporate issuers (current and prospective)</li>
+                    <li>Government organisations </li>
+                    <li>Leading Angolan and International Private Sector players</li>
+                    <li>Angolan leading public companies (banking, Telecom, Oil & Gas)</li>
+                    <li>Institutional investors (asset managers, sovereign wealth funds, pension funds)</li>
+                    <li>Investment bankers </li>
+                </ul>
             </SplitSectionText>
             <SplitSectionImage imageURL={SSI}>
             </SplitSectionImage>
         </SplitSection>
-        <Sections id="about-section" typeClass="normal" containerType="container">
-            <h3 className="col-xs-12" style={{float:'none'}}>
-            Recognising the 400 personalities and banks that are driving Africa’s rapidly transforming financial sector, the African Banker Awards bring together industry leaders from Africa and the world. They celebrate the achievements of those who are driving growth and development and creating new economic opportunities for citizens and communities all over the continent and inspire new generations of bankers who are shaping Africa’s future.
-            </h3>
-            <hr />
-            <div className="contactmatrix" >
-                <h2 id="categories" className="col-xs-12">The Categories</h2>
-                <p className="col-xs-12">Our categories highlight the achievements of companies and individuals that contribute to the transformation and development of Africa’s financial sector. They focus on areas important to the finance community and their stakeholders.  We review our categories every year to ensure the Awards remain relevant and take into account the changing realities on the ground.</p>
-                <div id="scrollholder" className="col-xs-12 col-sm-2 hidden-sm hidden-xs">
-                    <ScrollingDownload></ScrollingDownload> 
-                </div>
-                <div className="categoriesholder col-xs-12 col-sm-10">
-                    {categoriesMatrix}
-                </div>
+        <Sections id="info-section" typeClass="normal" containerType="container" style={{backgroundColor:'white'}}>
+            <h2 className="col-xs-12" style={{color:'red'}}>Sponsorship Opportunities</h2>
+            <div  className="col-xs-12">
+                
+                <p>
+                    Sponsoring this Forum offers wide-ranging benefits, giving your institution a unique platform at the conference, as well as through our publications African Business, New African and African Banker, enhancing your corporate profile to influential participants. Our dedicated team will work closely with the sponsors to tailor their involvement in the summit and maximise media exposure.
+                </p>
+                <h4>Exposure & Visibility</h4>
+                    <p>
+                        Exposure & Visibility: Pre, during and post-event marketing exposure is offered across bespoke Diamond, Platinum, Gold and Silver packages. At the event, sponsors will benefit from branding and signage featuring corporate logos displayed prominently. Post event communication with delegates and the wider business community will include sponsor logos. Sponsors will also benefit from extensive media coverage in our business and current affairs magazines African Banker, African Business, and New African, as well as from international media covering the event.
+                    </p>
             </div>
         </Sections>
-        <Sections id="previousevent-section" typeClass="normal" containerType="container-fluid">
-            <div className="container">
-                <h2>The Previous Winners</h2>
-
-                <PreviousWinners></PreviousWinners>
+        <Sections id="footer-section" typeClass="normal" containerType="container" style={{backgroundColor:'#ededed'}}>
+            <div className="col-xs-12 col-sm-4">
+                <h4>Media Partners</h4>
+                <img src={AB} className="col-xs-6" />
+                <img src={ABk} className="col-xs-6" />
             </div>
-            <PhotoCarousel></PhotoCarousel>
+            <div className="col-xs-12 col-sm-4">
+                <h4>Organised By</h4>
+                <img src={Events} className="col-xs-6" />
+            </div>
+            
+            <div className="col-xs-12 col-sm-4">
+                <h4>Hosted By</h4>
+                <img src={Covington} className="col-xs-6" />
+            </div>
         </Sections>
-        <Sections id="judging-section" typeClass="normal" containerType="container">
-            <h1>Judging</h1>
-            <div>
-                <h3 className="col-xs-12 col-md-4">The Selection and Judging Process</h3>
-                <p className="col-xs-12">Following a call for entries our advisory committee shortlists nominees for each category from the pool of submissions. The committee is made up of our editorial board and experts with an in-depth knowledge of the African banking and finance sector. Our independent expert judging panel with extensive expertise across the African regions will then select the winners based on a number of specific criteria from the shortlist. The winners will be announced at the Awards ceremony. </p>
-            </div>   
-        </Sections>
-        <Sections id="programme-section" typeClass="normal" containerType="container">
-            <h1>Programme</h1>
-            <FeedBox id="programmebox">
-                <p>At this year's African Banker Awards we will be holding a variety of informative and progressive meetings, discussions and roundtables to help the progression of all attendees and stakeholders within the African Banking sector.  Please stay tuned as our programme is updated with exciting possibilities for discussions</p>
-            </FeedBox>
-        </Sections>
-        <SplitSection id="venue-section">
-            <SplitSectionImage imageURL={SSI2}></SplitSectionImage>
-            <SplitSectionEmpty>
-                <div id="hoteldets">
-                    <div className="col-xs-12 col-sm-10 col-sm-offset-1">
-                        <h3>Busan, South Korea</h3>
-                        <img src={mapPlaceholder} className="img-responsive" />
-                        <p className="col-xs-12 col-sm-6">
-                            After a jam packed and successful event last year in India; The African Banker Awards continues on it's movement around Asia into the beautiful city of Busan, South Korea. 
-                        </p>
-                        <p className="col-xs-12 col-sm-4" style={{fontWeight:'bold'}}>
-                            Exact Location TBC
-                        </p>
-                    </div>
-                </div>
-                <div id="gmaps" style={{backgroundImage:'url('+mapPlaceholder+')', height:'50%',backgroundSize:'cover',backgroundPosition:'center center', color:'white'}}>
-                    <p style={{textAlign:'center'}} className="vertical-center">Exact Location To be Confirmed...</p>
-                </div>
-            </SplitSectionEmpty>
-        </SplitSection>
-        <Sections id="mainsponsor-section" typeClass="normal" containerType="container">
-            {sponsorHeadings}
-        </Sections>
-        <Sections id="contact-section" typeClass="normal" containerType="container">
-            <p>Feel free to contact us using the following email addresses:</p>
-            <ContactBox contactIcon="" contactType="Sponsorships" contactEmail="events@icpublications.com"></ContactBox>
-        </Sections>
-        <nav id="mobile-bottom-nav" className="visible-xs">
-            <a target="_blank" href="https://www.eventbrite.co.uk/e/african-banker-awards-2018-tickets-43207317249">Book your place</a>
-            <a target="_blank" href="https://icpublications.formstack.com/forms/african_banker_awards_2018">Entry Form</a>
-        </nav>
     </div>, 
   
     document.getElementById('app')

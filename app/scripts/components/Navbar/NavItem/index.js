@@ -11,7 +11,7 @@ export class NavItem extends React.Component{
     render(){
         return(
             <li>
-                <a href={this.props.href}  style={{color:'white'}} className="navitemlink" onClick={this.handleClick.bind(this, this.props.href)}>
+                <a href={this.props.href}  style={{color:'black', fontWeight:'bold'}} className="navitemlink" onClick={this.handleClick.bind(this, this.props.href)}>
                     {this.props.children}
                 </a>
             </li>            

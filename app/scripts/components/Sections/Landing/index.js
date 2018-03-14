@@ -6,7 +6,7 @@ import landingbg from 'images/landingbg.png';
 export class Landing extends React.Component{
     render(){
         return(
-            <Sections id={this.props.id} extraBgElements={this.props.extraBgElements} containerType="container" template={this.props.template} typeClass="landing" bg={landingbg}>
+            <Sections id={this.props.id} extraBgElements={this.props.extraBgElements} style={{marginLeft:'200px'}} containerType="container left215" template={this.props.template} typeClass="landing" bg={landingbg}>
                 <p className="introText">{this.props.introText}</p>
                 {this.props.children}
             </Sections>

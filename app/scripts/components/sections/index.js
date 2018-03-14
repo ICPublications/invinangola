@@ -3,12 +3,15 @@ import React from 'react';
 export class Sections extends React.Component{
     getStyle(){
         var styles;
+        if(this.props.style!=undefined){
+            styles = this.props.style;
+        }
         if(this.props.bg!=undefined){
-            styles = {backgroundImage: 'url(' + this.props.bg + ')'};
-        }else{
+            styles.backgroundImage = 'url(' + this.props.bg + ')';
+        }
+        if(this.props.style==undefined && this.props.bg==undefined){
             styles ={};
         }
-
         return styles;
     }
     componentDidMount() {

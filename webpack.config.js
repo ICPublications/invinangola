@@ -11,7 +11,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'), //resolves the absolute path 
         filename: '[name].bundle.js', //
-        publicPath: '/'
+        publicPath: '/testspace/angola'
     },
     devtool: 'inline-source-map',
     resolve:{
